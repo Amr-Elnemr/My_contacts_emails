@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Add Contact</title>
+</head>
+<body>
+    <h2><a href="{% url 'index' %}">Home</a></h2>
+    <h3>Add New Contact</h3>
+    <form method="POST">
+        {% csrf_token%}
+        {{ form.as_p}}
+        <br>
+        <button type="submit" style="font-weight: bold;">Submit</button>
+    </form>
+
+</body>
+</html>

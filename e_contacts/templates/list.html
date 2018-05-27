@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>List Contacts</title>
+</head>
+<body>
+    <h2><a href="{% url 'index' %}">Home</a></h2>
+    <h3><b>Contacts list</b></h3>
+    <table class="table" style="max-width:50%;">
+      <tr>
+        <th>Name</th>
+        <th>e-mail</th>
+      </tr>
+        {% for contact in contacts %}
+              <tr>
+                <td>{{contact.name}}</td>
+                <td>{{contact.email}}</td>
+              </tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>
